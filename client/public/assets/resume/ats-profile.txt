@@ -8,10 +8,10 @@ GitHub: github.com/Shivudk
 LeetCode: leetcode.com/u/shivu_d_k
 
 Professional Summary
-Results-driven Computer Science engineering graduate graduating in May 2026 with hands-on experience in Java, Kotlin, Android development, Jetpack Compose, Firebase, REST APIs, React.js, Node.js, MongoDB, MySQL, Google Cloud Platform, and Generative AI tools. Seeking Software Developer, Android Developer, Java Developer, or Full Stack Developer roles.
+Results-driven Computer Science engineering graduate, May 2026, with hands-on experience in Java, Kotlin, Android development, Jetpack Compose, Firebase, REST APIs, React.js, Node.js, Express.js, MongoDB, MySQL, Google Cloud Platform, and Generative AI tools. Seeking Software Developer, MERN Developer, Android Developer, Java Developer, or Full Stack Developer roles.
 
 Core Skills
-Java, Kotlin, JavaScript, C, SQL, HTML5, CSS3, React.js, Node.js, REST APIs, Android Development, Jetpack Compose, Android Studio, Firebase Realtime Database, Firebase Cloud Messaging, MongoDB, MySQL, Google Cloud Platform, Google AI Studio, Git, GitHub, VS Code, Data Structures and Algorithms, Object-Oriented Programming, DBMS, Operating Systems, Computer Networks.
+Java, Kotlin, JavaScript, C, SQL, HTML5, CSS3, React.js, Node.js, Express.js, MongoDB, MERN Stack, REST APIs, Android Development, Jetpack Compose, Android Studio, Firebase Realtime Database, Firebase Cloud Messaging, MySQL, Google Cloud Platform, Google AI Studio, Git, GitHub, VS Code, Data Structures and Algorithms, Object-Oriented Programming, DBMS, Operating Systems, Computer Networks.
 
 Education
 Bachelor of Engineering in Computer Science, The Oxford College of Engineering, Bangalore, India.
