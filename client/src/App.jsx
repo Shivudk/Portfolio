@@ -355,10 +355,29 @@ function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-gridline" aria-hidden="true" />
+      <div className="hero-motion-layer" aria-hidden="true">
+        <div className="motion-beam motion-beam-one" />
+        <div className="motion-beam motion-beam-two" />
+        <div className="hero-scanline" />
+        <div className="code-hud">
+          <span className="hud-topline" />
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
+        <div className="stack-hud">
+          <span>React</span>
+          <span>API</span>
+          <span>Mongo</span>
+        </div>
+      </div>
       <div className="shell hero-shell">
         <div className="hero-copy" data-reveal>
           <p className="eyebrow">MERN portfolio for software developer roles</p>
-          <h1>{profile.name}</h1>
+          <h1 className="hero-name" data-text={profile.name}>
+            {profile.name}
+          </h1>
           <p className="hero-title">Java, Android, and full-stack developer turning real workflows into polished software.</p>
           <p className="hero-summary">{profile.summary}</p>
           <div className="hero-pills" aria-label="Profile highlights">

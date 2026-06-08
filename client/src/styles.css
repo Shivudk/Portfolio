@@ -133,8 +133,7 @@ h4 {
 }
 
 h1 {
-  max-width: 10ch;
-  font-size: 6.25rem;
+  font-size: clamp(2.55rem, 5.7vw, 6.65rem);
 }
 
 h2 {
@@ -351,22 +350,172 @@ h4 {
 .hero-gridline {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   background:
     linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 68px 68px;
   mask-image: linear-gradient(90deg, #000 0%, transparent 82%);
+  animation: gridDrift 18s linear infinite;
+}
+
+.hero-motion-layer {
+  position: absolute;
+  inset: var(--header) 0 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.motion-beam {
+  position: absolute;
+  left: 52%;
+  width: 42vw;
+  height: 1px;
+  transform-origin: left;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent) 74%, transparent), transparent);
+  opacity: 0.7;
+  filter: drop-shadow(0 0 12px color-mix(in srgb, var(--accent) 48%, transparent));
+}
+
+.motion-beam-one {
+  top: 28%;
+  transform: rotate(-16deg);
+  animation: beamSweep 6.5s var(--ease) infinite;
+}
+
+.motion-beam-two {
+  top: 66%;
+  transform: rotate(11deg);
+  animation: beamSweep 8s var(--ease) 1.2s infinite reverse;
+}
+
+.hero-scanline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  left: 55%;
+  background: linear-gradient(180deg, transparent, var(--accent), transparent);
+  opacity: 0.48;
+  animation: scanline 7.2s linear infinite;
+}
+
+.code-hud {
+  position: absolute;
+  top: 22%;
+  right: clamp(1rem, 6vw, 8rem);
+  display: grid;
+  gap: 0.55rem;
+  width: min(28vw, 360px);
+  min-width: 240px;
+  padding: 1rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 12%, transparent), transparent 58%),
+    color-mix(in srgb, var(--surface-strong) 72%, transparent);
+  box-shadow: 0 22px 68px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(18px) saturate(1.16);
+  animation: hudFloat 7s var(--ease) infinite;
+}
+
+.code-hud span {
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--warm) 74%, transparent));
+  opacity: 0.74;
+  transform-origin: left;
+  animation: codePulse 3.5s ease-in-out infinite;
+}
+
+.code-hud span:nth-child(2) {
+  width: 68%;
+  animation-delay: 0.3s;
+}
+
+.code-hud span:nth-child(3) {
+  width: 86%;
+  animation-delay: 0.6s;
+}
+
+.code-hud span:nth-child(4) {
+  width: 54%;
+  animation-delay: 0.9s;
+}
+
+.code-hud span:nth-child(5) {
+  width: 76%;
+  animation-delay: 1.2s;
+}
+
+.hud-topline {
+  width: 42%;
+}
+
+.stack-hud {
+  position: absolute;
+  right: clamp(1rem, 7vw, 9rem);
+  bottom: 17%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(70px, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  width: min(30vw, 390px);
+  min-width: 260px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--line);
+  animation: hudFloat 8.5s var(--ease) 0.8s infinite reverse;
+}
+
+.stack-hud span {
+  display: grid;
+  place-items: center;
+  min-height: 44px;
+  background: color-mix(in srgb, var(--surface-strong) 82%, transparent);
+  color: var(--muted-strong);
+  font-weight: 950;
+  text-transform: uppercase;
+  font-size: 0.72rem;
 }
 
 .hero-shell {
+  position: relative;
+  z-index: 1;
   width: min(calc(100% - 40px), var(--max));
   margin-inline: auto;
   padding: 4rem 0 2.5rem;
 }
 
 .hero-copy {
-  max-width: 840px;
+  max-width: min(100%, 1120px);
+}
+
+.hero-name {
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
+  line-height: 0.95;
+  font-size: clamp(1.95rem, 5.65vw, 6.65rem);
+  letter-spacing: 0;
+  text-shadow: 0 18px 48px rgba(0, 0, 0, 0.34);
+  animation: titleReveal 1.05s var(--ease) both;
+}
+
+.hero-name::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.82) 45%, transparent 58%);
+  background-size: 220% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  pointer-events: none;
+  animation: titleSheen 5.8s ease-in-out 1.4s infinite;
 }
 
 .eyebrow,
@@ -502,6 +651,8 @@ h4 {
 }
 
 .metric-strip {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
@@ -1037,9 +1188,118 @@ footer {
   outline-offset: 3px;
 }
 
+@keyframes titleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(26px) scale(0.985);
+    clip-path: inset(0 100% 0 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes titleSheen {
+  0%,
+  62% {
+    background-position: 180% 0;
+    opacity: 0;
+  }
+
+  72% {
+    opacity: 1;
+  }
+
+  88%,
+  100% {
+    background-position: -70% 0;
+    opacity: 0;
+  }
+}
+
+@keyframes gridDrift {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 68px 68px, 68px 68px;
+  }
+}
+
+@keyframes beamSweep {
+  0%,
+  100% {
+    opacity: 0.08;
+    translate: -12% 0;
+    scale: 0.85 1;
+  }
+
+  42% {
+    opacity: 0.72;
+    translate: 8% 0;
+    scale: 1.05 1;
+  }
+
+  70% {
+    opacity: 0.28;
+    translate: 18% 0;
+    scale: 0.9 1;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateX(-26vw);
+    opacity: 0;
+  }
+
+  18%,
+  72% {
+    opacity: 0.48;
+  }
+
+  100% {
+    transform: translateX(46vw);
+    opacity: 0;
+  }
+}
+
+@keyframes hudFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -14px, 0);
+  }
+}
+
+@keyframes codePulse {
+  0%,
+  100% {
+    transform: scaleX(0.72);
+    opacity: 0.45;
+  }
+
+  45%,
+  65% {
+    transform: scaleX(1);
+    opacity: 0.9;
+  }
+}
+
 @media (max-width: 1080px) {
   h1 {
     font-size: 4.8rem;
+  }
+
+  .hero-name {
+    font-size: clamp(2.6rem, 7vw, 4.8rem);
   }
 
   h2 {
@@ -1063,6 +1323,16 @@ footer {
 
   .project-visual img {
     min-height: 320px;
+  }
+
+  .code-hud {
+    right: 1rem;
+    opacity: 0.42;
+  }
+
+  .stack-hud {
+    right: 1rem;
+    opacity: 0.5;
   }
 }
 
@@ -1134,6 +1404,10 @@ footer {
     font-size: 3.25rem;
   }
 
+  .hero-name {
+    font-size: clamp(1.85rem, 7.7vw, 3.25rem);
+  }
+
   h2 {
     font-size: 2.15rem;
   }
@@ -1144,6 +1418,12 @@ footer {
 
   .hero-title {
     font-size: 1.15rem;
+  }
+
+  .code-hud,
+  .stack-hud,
+  .motion-beam {
+    display: none;
   }
 
   .section {
@@ -1199,6 +1479,10 @@ footer {
 @media (max-width: 430px) {
   h1 {
     font-size: 2.75rem;
+  }
+
+  .hero-name {
+    font-size: clamp(1.7rem, 7.4vw, 2.25rem);
   }
 
   .nav-shell {
