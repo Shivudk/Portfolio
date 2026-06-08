@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Vercel/local deployment state
+.vercel/
+
+# Logs and generated runtime output
+*.log
+
+# Build output
+client/dist/
+dist/
+.next/
+
+# Local environment
+.env
+.env.local
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+~$*

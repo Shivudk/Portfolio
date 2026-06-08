@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Ashram Donation Management System project preview</title>
+  <desc id="desc">Stylized donation management dashboard with records and reporting cards.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#13211f"/>
+      <stop offset=".48" stop-color="#24423d"/>
+      <stop offset="1" stop-color="#f4a261"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e2f2ed"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" rx="28" fill="url(#bg)"/>
+  <path d="M112 456h736v62H112z" fill="#071112" opacity=".28"/>
+  <g transform="translate(120 96)">
+    <rect width="720" height="380" rx="28" fill="#071112" opacity=".82"/>
+    <rect x="24" y="24" width="672" height="332" rx="22" fill="url(#panel)"/>
+    <rect x="54" y="58" width="160" height="236" rx="18" fill="#13211f"/>
+    <rect x="82" y="88" width="104" height="12" rx="6" fill="#2fd6c2"/>
+    <rect x="82" y="126" width="84" height="10" rx="5" fill="#d6ebe5"/>
+    <rect x="82" y="158" width="104" height="10" rx="5" fill="#d6ebe5"/>
+    <rect x="82" y="190" width="72" height="10" rx="5" fill="#d6ebe5"/>
+    <rect x="82" y="236" width="96" height="32" rx="9" fill="#f4a261"/>
+    <rect x="250" y="58" width="178" height="92" rx="18" fill="#ffffff"/>
+    <rect x="280" y="88" width="78" height="12" rx="6" fill="#0f766e"/>
+    <rect x="280" y="116" width="118" height="10" rx="5" fill="#8aa09b"/>
+    <rect x="456" y="58" width="178" height="92" rx="18" fill="#ffffff"/>
+    <rect x="486" y="88" width="96" height="12" rx="6" fill="#d97706"/>
+    <rect x="486" y="116" width="106" height="10" rx="5" fill="#8aa09b"/>
+    <rect x="250" y="184" width="384" height="110" rx="18" fill="#ffffff"/>
+    <path d="M286 250c34-54 72-18 110-58 30-32 64-12 90-42 18-21 44-14 72-28" fill="none" stroke="#0f766e" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="286" y="260" width="120" height="10" rx="5" fill="#bdd5cf"/>
+    <rect x="440" y="260" width="148" height="10" rx="5" fill="#bdd5cf"/>
+  </g>
+  <g transform="translate(684 380)">
+    <rect width="92" height="92" rx="20" fill="#2fd6c2"/>
+    <path d="M46 22v48M26 44h40" stroke="#071112" stroke-width="12" stroke-linecap="round"/>
+  </g>
+</svg>

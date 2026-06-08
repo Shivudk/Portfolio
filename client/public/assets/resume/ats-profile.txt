@@ -1,0 +1,37 @@
+Shivakumara D K
+Aspiring Software Developer | Android Developer | Java Developer
+Bangalore, Karnataka, India
+Email: shivudk8970@gmail.com
+Phone: +91 9591081735
+LinkedIn: linkedin.com/in/shivudk78a09225a
+GitHub: github.com/Shivudk
+LeetCode: leetcode.com/u/shivu_d_k
+
+Professional Summary
+Results-driven Computer Science engineering graduate graduating in May 2026 with hands-on experience in Java, Kotlin, Android development, Jetpack Compose, Firebase, REST APIs, React.js, Node.js, MongoDB, MySQL, Google Cloud Platform, and Generative AI tools. Seeking Software Developer, Android Developer, Java Developer, or Full Stack Developer roles.
+
+Core Skills
+Java, Kotlin, JavaScript, C, SQL, HTML5, CSS3, React.js, Node.js, REST APIs, Android Development, Jetpack Compose, Android Studio, Firebase Realtime Database, Firebase Cloud Messaging, MongoDB, MySQL, Google Cloud Platform, Google AI Studio, Git, GitHub, VS Code, Data Structures and Algorithms, Object-Oriented Programming, DBMS, Operating Systems, Computer Networks.
+
+Education
+Bachelor of Engineering in Computer Science, The Oxford College of Engineering, Bangalore, India.
+November 2022 to May 2026. CGPA: 7.95 / 10.0.
+
+Experience
+Android App Development Intern, MindMatrix (CL Infotech Pvt. Ltd.), Bangalore, India.
+February 2026 to May 2026.
+Completed a VTU-recognized Android App Development internship focused on Kotlin, Jetpack Compose, Android Studio, Firebase, Google Cloud Labs, Google AI Studio, and Generative AI-assisted prototyping. Designed UI/UX screens, functional modules, and application prototypes. Integrated Firebase services for Android application workflows. Participated in testing, debugging, performance tuning, and optimization. Followed structured Android development workflows through project-based learning. Achieved Excellent performance rating during internship evaluation.
+
+Projects
+Gram Waste Tracker: Real-time Android application using Kotlin, Jetpack Compose, Firebase Realtime Database, Firebase Cloud Messaging, and Google Maps SDK. Supports residents, admins, and tractor drivers for reporting, assignment, tracking, and closure of waste collection tickets.
+
+Medi-Fusion: Full-stack blockchain healthcare platform using Node.js, Express.js, Solidity, MySQL, and OCR. Includes role-based portals for patients, doctors, and hospitals, appointment booking, prescriptions, and medical record tracking.
+
+Ashram Donation Management System: Full-stack web application using Node.js, Express.js, MongoDB, REST APIs, and session-based authentication to manage donor registration, records, and reporting workflows.
+
+Certifications and Learning
+Android App Development Using Gen AI.
+AI Tools Workshop - Be 10X.
+Certificate in Java Development.
+Octanet Internship.
+SecurityBoat Community Meetup participant covering AI Security, Privacy, Trust, Accountability, DPDPA, and GDPR.

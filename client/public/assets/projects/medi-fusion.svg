@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Medi-Fusion project preview</title>
+  <desc id="desc">Stylized healthcare dashboard connected to blockchain data nodes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#171923"/>
+      <stop offset=".55" stop-color="#173342"/>
+      <stop offset="1" stop-color="#ef6f6c"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d9eef4"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" rx="28" fill="url(#bg)"/>
+  <g opacity=".24" stroke="#ffffff" stroke-width="3">
+    <path d="M620 96l82 72-36 104 90 86-48 106"/>
+    <path d="M702 168l122 18-68 172"/>
+    <path d="M666 272l-118 78 160 114"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="620" cy="96" r="16" opacity=".82"/>
+    <circle cx="702" cy="168" r="18" opacity=".82"/>
+    <circle cx="666" cy="272" r="14" opacity=".82"/>
+    <circle cx="756" cy="358" r="18" opacity=".82"/>
+    <circle cx="708" cy="464" r="14" opacity=".82"/>
+  </g>
+  <g transform="translate(98 104)">
+    <rect width="500" height="350" rx="28" fill="url(#card)"/>
+    <rect x="34" y="32" width="432" height="52" rx="14" fill="#0f1720" opacity=".9"/>
+    <rect x="56" y="52" width="140" height="10" rx="5" fill="#2fd6c2"/>
+    <rect x="340" y="48" width="84" height="18" rx="9" fill="#f4a261"/>
+    <rect x="34" y="116" width="188" height="168" rx="18" fill="#ffffff"/>
+    <path d="M128 158v84M86 200h84" stroke="#ef6f6c" stroke-width="20" stroke-linecap="round"/>
+    <rect x="250" y="116" width="216" height="74" rx="18" fill="#ffffff"/>
+    <rect x="280" y="142" width="120" height="12" rx="6" fill="#173342"/>
+    <rect x="280" y="166" width="154" height="8" rx="4" fill="#8aa5ad"/>
+    <rect x="250" y="210" width="216" height="74" rx="18" fill="#ffffff"/>
+    <rect x="280" y="236" width="94" height="12" rx="6" fill="#0f766e"/>
+    <rect x="280" y="260" width="142" height="8" rx="4" fill="#8aa5ad"/>
+    <rect x="34" y="310" width="432" height="12" rx="6" fill="#c4dbe0"/>
+  </g>
+  <g transform="translate(598 366)">
+    <rect width="230" height="94" rx="18" fill="#0f1720" opacity=".86"/>
+    <path d="M34 48h162" stroke="#2fd6c2" stroke-width="10" stroke-linecap="round"/>
+    <path d="M34 70h96" stroke="#f4a261" stroke-width="10" stroke-linecap="round"/>
+    <rect x="174" y="24" width="28" height="28" rx="6" fill="#ef6f6c"/>
+  </g>
+</svg>
