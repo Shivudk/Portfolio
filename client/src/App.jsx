@@ -6,7 +6,7 @@ const ATS_PATH = "/assets/resume/ats-profile.txt";
 
 const profile = {
   name: "Shivakumara D K",
-  role: "Software Developer",
+  role: "Full Stack Developer/MERN Developer/Android Developer",
   location: "Bangalore, Karnataka, India",
   email: "shivudk8970@gmail.com",
   phone: "+91 9591081735",
@@ -686,7 +686,7 @@ function Hero() {
             <span className="spotlight-glow" aria-hidden="true" />
             <div className="recruiter-dashboard-header">
               <p>Recruiter dashboard</p>
-              <p className="dashboard-title">At-a-glance hiring signals</p>
+              <p className="dashboard-title">At-glance hiring signals</p>
             </div>
             {metrics.map((metric) => (
               <MotionArticle key={metric.label} spotlight>
@@ -936,7 +936,14 @@ function Projects() {
           </button>
         ))}
       </div>
-      <motion.div className="shell project-stack" variants={staggerMotion}>
+      {/* ADDED KEY AND ANIMATION PROPS HERE TO FIX FILTERING BUG */}
+      <motion.div 
+        className="shell project-stack" 
+        variants={staggerMotion}
+        key={filter}
+        initial="hidden"
+        animate="visible"
+      >
         {featuredProject ? <ProjectFeaturedCard project={featuredProject} index={0} /> : null}
         {gridProjects.length > 0 ? (
           <div className="project-grid">
@@ -1009,7 +1016,7 @@ function Skills() {
         ))}
       </div>
       {group === "All" ? (
-        <div className="shell">
+        <motion.div className="shell" key="all-skills" initial="hidden" animate="visible">
           {groupedCategories.map((category) => {
             const categorySkills = getSkillsForCategory(category);
             if (!categorySkills.length) return null;
@@ -1031,9 +1038,15 @@ function Skills() {
               </section>
             );
           })}
-        </div>
+        </motion.div>
       ) : (
-        <motion.div className="shell skills-grid" variants={staggerMotion}>
+        <motion.div 
+          className="shell skills-grid" 
+          variants={staggerMotion} 
+          key={group} 
+          initial="hidden" 
+          animate="visible"
+        >
           {visibleSkills.map((skill, index) => (
             <SkillCard key={skill.name} skill={skill} rank={index + 1} />
           ))}
@@ -1252,8 +1265,17 @@ export default function App() {
       </main>
       <footer>
         <div className="shell footer-inner">
-          <p>Designed and built by {profile.name}.</p>
-          <a href="#home">Back to top</a>
+          <div className="footer-left">
+            <p>Designed and built by {profile.name} • {new Date().getFullYear()}</p>
+          </div>
+          <div className="footer-right">
+            <nav aria-label="footer social">
+              <a href={profile.links?.github || '#'} target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href={profile.links?.linkedin || '#'} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href={profile.links?.twitter || '#'} target="_blank" rel="noopener noreferrer">Twitter</a>
+            </nav>
+            <a className="back-to-top" href="#home" aria-label="Back to top">↑</a>
+          </div>
         </div>
       </footer>
     </>
