@@ -10,7 +10,7 @@ const profile = {
   location: "Bangalore, Karnataka, India",
   email: "shivudk8970@gmail.com",
   phone: "+91 9591081735",
-  linkedin: "https://www.linkedin.com/in/shivudk78a09225a",
+  linkedin: "https://www.linkedin.com/in/shivudk/",
   github: "https://github.com/Shivudk",
   leetcode: "https://leetcode.com/u/shivu_d_k",
   summary:
